@@ -2,16 +2,21 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Form from "./components/Form";
 import Table from "./components/Table";
-import DataProvider from "./context/DataProvider";
+import EditUserForm from "./components/EditUserForm";
+import { DataConsumer } from "./context/DataProvider";
 
 function App() {
+  const { edit } = DataConsumer();
+
+
+  
   return (
     <>
       <div style={divider}>
-        <DataProvider>
-           <div><Form /></div>
+        {
+          edit ? <div> <EditUserForm /> </div> : <div> <Form /> </div>
+        }
            <div><Table /></div>
-        </DataProvider>
       </div>
     </>
   );

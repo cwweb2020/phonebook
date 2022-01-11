@@ -8,6 +8,11 @@ import { v4 as uuidv4 } from 'uuid';
 const DataProvider = ({children}) => {
     const phoneBookStorage = JSON.parse(localStorage.getItem("phonebook"))
     const [phonebook, setPhonebook] = useState(phoneBookStorage || []);
+    const [currentUser, setCurrentUser] = useState({
+        name: "",
+        phone: "",
+        id: null
+    });
     
     const setPhonebookfn = (dato) => {
         setPhonebook([
@@ -24,9 +29,15 @@ const DataProvider = ({children}) => {
     }
    
 
+    // edit user 
+    const [edit, setEdit] = useState(false)
+    const edituUser = (id) => {
+        setEdit(true)
+        console.log(id);
+    }
 
     return (
-        <DataContext.Provider value={{phonebook, setPhonebookfn, deleteItem}}>
+        <DataContext.Provider value={{phonebook, setPhonebookfn, deleteItem, edit, edituUser}}>
             {children}
         </DataContext.Provider>
     )

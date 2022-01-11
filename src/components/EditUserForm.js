@@ -4,7 +4,7 @@ import { DataConsumer } from "../context/DataProvider";
 
 
 
-const Form = () => {
+const EditUserForm = () => {
     const { setPhonebookfn } = DataConsumer();
   const [dato, setDato] = useState({
     name: "",
@@ -20,7 +20,7 @@ const Form = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setPhonebookfn(dato);
+   
      
     e.target.reset();
   };
@@ -29,7 +29,7 @@ const Form = () => {
 
   return (
     <>
-       <h1 className="fs-3 my-5">Add contact</h1>
+       <h1 className="fs-3 my-5">Edit information</h1>
       <form onSubmit={handleSubmit} style={{width: "70%"}}>
         <input
         className="form-control"
@@ -45,10 +45,10 @@ const Form = () => {
           placeholder="Phone"
           onChange={handleChange}
         />
-        <Button className="mt-3" type="submit" variant="contained" style={{width: "100%"}}>Add Contact</Button>
+        <Button className="mt-3" type="submit" variant="contained" style={{width: "100%"}}>Eddit Contact</Button>
       </form>
     </>
   );
 };
 
-export default Form;
+export default EditUserForm;
