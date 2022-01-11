@@ -34,14 +34,14 @@ const Form = () => {
         className="form-control"
           type="text"
           name="name"
-          placeholder="Nombre"
+          placeholder="Name"
           onChange={handleChange}
         />
         <input
           className="form-control mt-3"
           type="number"
           name="phone"
-          placeholder="Telefono"
+          placeholder="Phone"
           onChange={handleChange}
         />
         <Button className="mt-3" type="submit" variant="contained" style={{width: "100%"}}>Add Contact</Button>

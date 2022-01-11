@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <div style={divider}>
-        <h1 className="fs-2 my-5">Ingrese información</h1>
+        <h1 className="fs-2 my-5">Enter information</h1>
         <DataProvider>
           <Form />
           <Table />
