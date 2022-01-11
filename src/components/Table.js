@@ -14,11 +14,11 @@ const Table = () => {
         <thead>
           <tr>
             <th scope="col">#</th>
-            <th scope="col">Nombre</th>
+            <th scope="col">Name</th>
             <th scope="col"></th>
             <th scope="col"></th>
             <th scope="col"></th>
-            <th scope="col" style={{textAlign: "center"}}>Telefono</th>
+            <th scope="col" style={{textAlign: "center"}}>Phone</th>
           </tr>
         </thead>
            <List phonebook={phonebook} deleteItem={deleteItem}/>
