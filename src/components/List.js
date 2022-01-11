@@ -3,9 +3,9 @@ import { ImBin } from 'react-icons/im';
 import { BsPencil } from 'react-icons/bs';
 
 const List = ({phonebook, deleteItem}) => {
+    const orderedPhonebook = phonebook.sort((a, b) => a.name.localeCompare(b.name))
 
-
-   console.log(phonebook);
+   console.log(orderedPhonebook);
 
  
   return (
