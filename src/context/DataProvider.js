@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useState } from "react"
+import { createContext, useContext, useState } from "react"
 import { v4 as uuidv4 } from 'uuid';
 
  const DataContext = createContext()
@@ -6,7 +6,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 
 const DataProvider = ({children}) => {
-    const phoneBookStorage = JSON.parse(sessionStorage.getItem("phonebook"))
+    const phoneBookStorage = JSON.parse(localStorage.getItem("phonebook"))
     const [phonebook, setPhonebook] = useState(phoneBookStorage || []);
     
     const setPhonebookfn = (dato) => {
@@ -14,13 +14,13 @@ const DataProvider = ({children}) => {
             ...phonebook,
             {...dato, id: uuidv4()}
         ])
-        sessionStorage.setItem("phonebook", JSON.stringify([...phonebook, dato]))
+        localStorage.setItem("phonebook", JSON.stringify([...phonebook, dato]))
     }
 
     const deleteItem = (id) => {
         setPhonebook(phonebook.filter(d => d.id !== id))
         const newPhonebook = phonebook.filter(d => d.id !== id)
-        sessionStorage.setItem("phonebook", JSON.stringify(newPhonebook))
+        localStorage.setItem("phonebook", JSON.stringify(newPhonebook))
     }
    
 

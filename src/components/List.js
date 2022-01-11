@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, {  } from "react";
 import { AiTwotonePhone } from 'react-icons/ai';
 import { BsFillPersonFill } from 'react-icons/bs';
 import { ImBin } from 'react-icons/im';

@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <div style={divider}>
-        <h1 className="fs-3 my-5">Ingrese dato</h1>
+        <h1 className="fs-2 my-5">Ingrese información</h1>
         <DataProvider>
           <Form />
           <Table />
@@ -21,7 +21,7 @@ function App() {
 const divider = {
   width: "45%",
   margin: "0 0 0 5%",
-  paddingBottom: "80px",
+  paddingBottom: "80px"
 };
 
 export default App;

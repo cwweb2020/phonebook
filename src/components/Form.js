@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Button from '@mui/material/Button';
 import { DataConsumer } from "../context/DataProvider";
 
 
 
 const Form = () => {
-    const { phonebook, setPhonebookfn } = DataConsumer();
+    const { setPhonebookfn } = DataConsumer();
   const [dato, setDato] = useState({
     name: "",
     phone: "",
