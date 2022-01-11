@@ -1,6 +1,8 @@
 import React, {  } from "react";
 import List from "./List";
 import { DataConsumer } from "../context/DataProvider";
+import { BsFillPersonFill } from 'react-icons/bs';
+import { AiTwotonePhone } from 'react-icons/ai';
 
 const Table = () => {
     const { phonebook, deleteItem } = DataConsumer();
@@ -14,11 +16,11 @@ const Table = () => {
         <thead>
           <tr>
             <th scope="col">#</th>
-            <th scope="col">Name</th>
+            <th scope="col">Name <BsFillPersonFill /></th>
             <th scope="col"></th>
             <th scope="col"></th>
             <th scope="col"></th>
-            <th scope="col" style={{textAlign: "center"}}>Phone</th>
+            <th scope="col" style={{textAlign: "center"}}>Phone <AiTwotonePhone /></th>
           </tr>
         </thead>
            <List phonebook={phonebook} deleteItem={deleteItem}/>
