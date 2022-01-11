@@ -11,8 +11,8 @@ const Table = () => {
 
   return (
     <>
-      <h2 className="mt-5 pt-4 fs-3">Phone Book</h2>
-      <table className="table mt-5" style={{ width: "100%" }}>
+      <h2 className="mt-5 fs-3">Phone Book</h2>
+      <table className="table mt-4" style={{ width: "100%" }}>
         <thead>
           <tr>
             <th scope="col">#</th>

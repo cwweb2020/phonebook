@@ -8,10 +8,9 @@ function App() {
   return (
     <>
       <div style={divider}>
-        <h1 className="fs-3 my-5">Enter information</h1>
         <DataProvider>
-          <Form />
-          <Table />
+           <div><Form /></div>
+           <div><Table /></div>
         </DataProvider>
       </div>
     </>
@@ -19,9 +18,10 @@ function App() {
 }
 
 const divider = {
-  width: "45%",
-  margin: "0 0 0 5%",
-  paddingBottom: "80px"
+  width: "85%",
+  display: "grid",
+  gridTemplateColumns: "1fr 1fr",
+  margin: "auto"
 };
 
 export default App;

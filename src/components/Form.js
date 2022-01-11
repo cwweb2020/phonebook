@@ -29,6 +29,7 @@ const Form = () => {
 
   return (
     <>
+       <h1 className="fs-3 my-5">Enter information</h1>
       <form onSubmit={handleSubmit} style={{width: "70%"}}>
         <input
         className="form-control"
