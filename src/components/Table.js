@@ -5,7 +5,7 @@ import { BsFillPersonFill } from 'react-icons/bs';
 import { AiTwotonePhone } from 'react-icons/ai';
 
 const Table = () => {
-    const { phonebook, deleteItem, edituUser } = DataConsumer();
+    const { phonebook, deleteItem, edituUser, showHideEdit } = DataConsumer();
    
 
 
@@ -23,7 +23,7 @@ const Table = () => {
             <th scope="col" style={{textAlign: "center"}}>Phone <AiTwotonePhone /></th>
           </tr>
         </thead>
-           <List phonebook={phonebook} deleteItem={deleteItem} edituUser={edituUser} />
+           <List phonebook={phonebook} deleteItem={deleteItem} edituUser={edituUser} showHideEdit={showHideEdit} />
       </table>
     </>
   );

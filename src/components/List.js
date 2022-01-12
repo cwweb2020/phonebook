@@ -2,10 +2,13 @@ import React, {  } from "react";
 import { ImBin } from 'react-icons/im';
 import { BsPencil } from 'react-icons/bs';
 
-const List = ({ phonebook, deleteItem, edituUser }) => {
+const List = ({ phonebook, deleteItem, edituUser, showHideEdit }) => {
     const orderedPhonebook = phonebook.sort((a, b) => a.name.localeCompare(b.name))
 
-   console.log(orderedPhonebook);
+    const HandleUserEdit = (user) => {
+      showHideEdit()
+      edituUser(user)
+    }
 
  
   return (
@@ -20,7 +23,7 @@ const List = ({ phonebook, deleteItem, edituUser }) => {
           <td></td>
           <td style={{textAlign: "center"}}>{d.phone}</td>
           <td><ImBin onClick={()=> deleteItem(d.id)} />&nbsp;&nbsp; <BsPencil 
-            onClick={()=> edituUser(d) }
+            onClick={()=> HandleUserEdit(d) }
           /> </td>
         </tr>
         ))}
