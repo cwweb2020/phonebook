@@ -14,7 +14,7 @@ const List = ({ phonebook, deleteItem, edituUser, showHideEdit }) => {
   return (
     <>
       <tbody>
-        {phonebook.length > 0 && phonebook.map((d, index) => (
+        {phonebook.length > 0 && orderedPhonebook.map((d, index) => (
         <tr key={index}>
           <th scope="row">{index + 1}</th>
           <td className="text-capitalize">{d.name}</td>

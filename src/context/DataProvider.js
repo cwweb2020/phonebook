@@ -28,6 +28,7 @@ const DataProvider = ({ children }) => {
     setCurrentUser(user);
   };
 
+  // show hide edit
   const showHideEdit = () => {
     setEdit(!edit);
   };
