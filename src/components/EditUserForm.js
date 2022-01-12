@@ -3,11 +3,11 @@ import Button from "@mui/material/Button";
 import { DataConsumer } from "../context/DataProvider";
 
 const EditUserForm = () => {
-  const { setPhonebookfn, currentUser, editUserDefinitely } = DataConsumer();
+  const { currentUser, editUserDefinitely } = DataConsumer();
   const [dato, setDato] = useState(currentUser);
-  console.log("desde edituderform " + currentUser);
 
-  // console.log("desde el editform " + currentUser);
+
+
   const handleChange = (e) => {
     setDato({
       ...dato,

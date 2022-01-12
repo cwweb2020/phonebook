@@ -24,7 +24,7 @@ const DataProvider = ({ children }) => {
   const [edit, setEdit] = useState(false);
 
   const edituUser = (user) => {
-    console.log(user);
+   
     setCurrentUser(user);
   };
 
